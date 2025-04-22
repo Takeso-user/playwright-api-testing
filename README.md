@@ -14,6 +14,7 @@ This project demonstrates how to use Playwright for API testing with the sample 
 - Authentication (register and login)
 - Testing error cases and delayed responses
 - Clean test organization with descriptive test groups
+- Centralized baseURL configuration
 
 ## Prerequisites
 
@@ -64,8 +65,21 @@ npx playwright show-report
 pw_api/
 ├── tests/
 │   └── api_tests.spec.ts    # API test cases
-├── playwright.config.ts     # Playwright configuration
+├── playwright.config.ts     # Playwright configuration with baseURL
+├── playwright-report/       # Test results and reports
+│   └── index.html           # HTML report
 └── package.json             # Project dependencies
+```
+
+## Configuration
+
+The project uses a centralized configuration in `playwright.config.ts`. The API base URL is defined there:
+
+```typescript
+use: {
+  baseURL: 'https://reqres.in/api',
+  // ...other settings
+}
 ```
 
 ## API Endpoints Tested
@@ -78,7 +92,7 @@ pw_api/
 - Get resource not found
 - Create user
 - Update user (PUT)
-- Update user (PATCH) 
+- Update user (PATCH)
 - Delete user
 - Register (successful)
 - Register (unsuccessful)
@@ -87,5 +101,9 @@ pw_api/
 - Delayed response
 
 ## Created
+
+April 22, 2025
+
+## Last Updated
 
 April 22, 2025
