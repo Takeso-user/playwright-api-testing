@@ -63,23 +63,9 @@ npx playwright show-report
 
 ```
 pw_api/
-├── tests/
 │   └── api_tests.spec.ts    # API test cases
-├── playwright.config.ts     # Playwright configuration with baseURL
-├── playwright-report/       # Test results and reports
-│   └── index.html           # HTML report
+├── playwright.config.ts     # Playwright configuration
 └── package.json             # Project dependencies
-```
-
-## Configuration
-
-The project uses a centralized configuration in `playwright.config.ts`. The API base URL is defined there:
-
-```typescript
-use: {
-  baseURL: 'https://reqres.in/api',
-  // ...other settings
-}
 ```
 
 ## API Endpoints Tested
@@ -101,9 +87,5 @@ use: {
 - Delayed response
 
 ## Created
-
-April 22, 2025
-
-## Last Updated
 
 April 22, 2025
